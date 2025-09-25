@@ -1,0 +1,6 @@
+services:
+  uv:
+    build: .
+    volumes:
+      - "./data:/app/data"
+      - "./result:/app/output"

@@ -1,0 +1,11 @@
+[project]
+name = "deep-learning-introduction"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = "==3.9.23"
+dependencies = [
+    "numpy==1.24.3",
+    "pillow==11.3.0",
+    "tensorflow==2.12.1",
+]

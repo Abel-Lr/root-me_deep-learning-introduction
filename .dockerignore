@@ -1,0 +1,10 @@
+# Exclure l'environnement virtuel
+.venv/
+
+# Exclure les fichiers de cache Python
+__pycache__/
+*.pyc
+
+# Exclure les fichiers de documentation ou temporaires
+README.md
+result.jpg
