@@ -62,6 +62,12 @@ This will start the container and the application inside it. If you don't want t
 docker-compose up -d
 ```
 
+If you don't want to clone the project you can get it from
+
+```bash
+docker pull ghcr.io/abel-lr/root-me_deep-learning-introduction:latest
+```
+
 ### Without Docker
 
 Make sure you have [uv](https://github.com/astral-sh/uv) installed. Install with it Python 3.9.23 as specified in the `pyproject.toml` file.

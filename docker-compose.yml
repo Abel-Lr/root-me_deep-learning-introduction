@@ -1,6 +1,7 @@
 services:
   uv:
     build: .
+    container_name: root_me_deep_learning_build
     volumes:
       - "./data:/app/data"
       - "./result:/app/output"
