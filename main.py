@@ -8,8 +8,9 @@ from PIL import Image
 from tensorflow.keras.models import load_model
 
 # os.environ["CUDA_VISIBLE_PROCESS"] = "-1"
+in_docker = os.environ.get("IN_DOCKER")
 
-DATA_PATH = Path("/app/data")
+DATA_PATH = Path("/app/data") if in_docker else Path("./data")
 JPG_PATH = Path(DATA_PATH.joinpath("Flag"))
 MODEL_PATH = Path(DATA_PATH.joinpath("Model.h5"))
 
@@ -47,6 +48,10 @@ if __name__ == "__main__":
         else:
             data[x, y] = [255, 255, 255]
         counter += 1
-    Image.fromarray(data).save("/app/output/result.jpg")
+    if in_docker:
+        save_path="/app/output/flag.jpg"
+    else:
+        save_path="./result/flag.jpg"
+    Image.fromarray(data).save(save_path)
     end_time = time()
     print(f"End of Process after {end_time-start_time} seconds running")
